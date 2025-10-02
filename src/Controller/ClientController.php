@@ -13,4 +13,16 @@ final class ClientController extends AbstractController
     {
         return $this->render('client/home.html.twig');
     }
+
+    #[Route('/client/about-us', name:'app_client_about')]
+    public function about(): Response
+    {
+        return $this->render("client/about.html.twig");
+    }
+
+    #[Route('/client/contact', name:'app_client_contact')]
+    public function contact(): Response
+    {
+        return $this->render('client/contact.html.twig');
+    }
 }
